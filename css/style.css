@@ -1,0 +1,82 @@
+/* Підключення шрифтів */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700&display=swap');
+
+/* Скидаємо стилі */
+@import url('reset.css');
+
+/* -------------------------------------------- */
+body {
+   background-color: transparent;
+   color: #303030;
+   font-family: 'Montserrat', sans-serif;
+   font-size: 28px;
+   font-weight: 500;
+}
+
+.wrapper {
+   max-width: 500px;
+   padding: 50px 15px;
+   margin-left: auto;
+   margin-right: auto;
+   text-align: center;
+}
+
+.wrapper *:not(:last-child) {
+   margin-bottom: 30px;
+}
+
+h1,
+h2 {
+   color: #f85a5a;
+}
+
+textarea {
+   display: block;
+   border: 2px solid #303030;
+   border-radius: 8px;
+   padding: 10px;
+   width: 100%;
+   min-height: 200px;
+   transition: all 300ms;
+}
+
+textarea:hover {
+   border: 2px solid #f85a5a;
+   outline: transparent;
+}
+
+textarea:focus-visible {
+   border: 2px solid #f85a5a;
+   outline: 2px solid #f85a5a;
+}
+
+.btn-block {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 20px;
+}
+
+.btn-block > * {
+   padding: 10px;
+   border: 2px solid #f85a5a;
+   border-radius: 8px;
+   transition: all 300ms;
+}
+
+.btn-block > *:hover {
+   background-color: #f85a5a;
+   color: aliceblue;
+}
+
+.btn-block > *:first-child {
+   margin: 0;
+}
+
+.result {
+   text-align: start;
+   min-height: 200px;
+   border-radius: 8px;
+   padding: 10px;
+   border: 2px solid #303030;
+}

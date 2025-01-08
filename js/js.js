@@ -1,9 +1,12 @@
 const refs = {
    wordProcessingForm: document.querySelector('[data-word-processing-form]'),
    result: document.querySelector('[data-result]'),
+   reset: document.querySelector('[data-reset]'),
 };
 
 refs.wordProcessingForm.addEventListener('submit', onSubmit);
+refs.reset.addEventListener('click', onReset);
+// refs.textarea.addEventListener('');
 
 function onSubmit(e) {
    e.preventDefault();
@@ -33,20 +36,12 @@ function onSubmit(e) {
 
 function shuffleSyllables(word) {
    let syllables = '';
-   // let sing = '';
 
    if (word.length <= 4) {
       syllables = shuffleWord(word);
    } else {
       syllables = shuffleArray(splitIntoSyllables(word));
    }
-
-   // sing = punctuationCheck(syllables);
-
-   // if (punctuationCheck(syllables) === !undefined) {
-   //    sing = punctuationCheck(syllables);
-   //    console.log('tttttttt');
-   // }
 
    return syllables;
 }
@@ -83,15 +78,6 @@ function shuffleArray(array) {
    return array.join('');
 }
 
-// function punctuationCheck(string) {
-//    const punctuation = [',', '.', ':', ';', '?', '!'];
-
-//    const arr = string.split('');
-//    // console.log('arr', arr);
-
-//    const result = arr.find((el) => {
-//       return punctuation.find((sign) => sign === el);
-//    });
-
-//    return result;
-// };
+function onReset() {
+   refs.result.textContent = '...';
+}

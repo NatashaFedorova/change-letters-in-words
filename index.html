@@ -4,23 +4,26 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.css">
    <title>Test</title>
 </head>
 
 <body>
-   <form class="" action="#" method="GET" enctype="multipart/form-data"
-      data-word-processing-form>
-      <p>Ввести текст для обробки</p>
-      <textarea name="exampleText" placeholder="Ввести" minlength="1" rows="5"
-         cols="33"></textarea>
-      <div>
-         <button type="reset">Очистити</button>
-         <button type="submit">Обробити</button>
-      </div>
-   </form>
-   <p cl>Результат</p>
+   <div class="wrapper">
+      <h2 class="">Ввести текст для обробки</h2>
+      <form class="" action="#" method="GET" enctype="multipart/form-data"
+         data-word-processing-form>
+         <textarea name="exampleText" placeholder="Ввести" minlength="1"
+            data-textarea></textarea>
+         <div class="btn-block">
+            <button type="reset" data-reset>Очистити</button>
+            <button type="submit">Обробити</button>
+         </div>
+      </form>
+      <h2>Результат</h2>
 
-   <p data-result>...</p>
+      <p class="result" data-result>...</p>
+   </div>
 </body>
 <script type="module" src="js/js.js"></script>
 
