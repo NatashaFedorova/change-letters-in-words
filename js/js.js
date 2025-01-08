@@ -6,7 +6,6 @@ const refs = {
 
 refs.wordProcessingForm.addEventListener('submit', onSubmit);
 refs.reset.addEventListener('click', onReset);
-// refs.textarea.addEventListener('');
 
 function onSubmit(e) {
    e.preventDefault();
@@ -30,8 +29,6 @@ function onSubmit(e) {
       });
    }
    refs.result.textContent = processedText.join(' ');
-
-   // e.currentTarget.reset();
 }
 
 function shuffleSyllables(word) {
